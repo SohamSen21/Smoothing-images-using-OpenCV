@@ -1,0 +1,10 @@
+import numpy as np
+import cv2 as cv
+
+img = cv.imread('C:/Users/91954/Pictures/stinkbug.png')
+medianBlur = cv.medianBlur(img, 15)
+
+cv.imshow('Original', img)
+cv.imshow('Median blur', medianBlur)
+
+cv.waitKey(0)
