@@ -1,0 +1,12 @@
+import cv2 as cv
+img = cv.imread('C:/Users/91954/Pictures/stinkbug.png')
+cv.imshow("Original",img)
+
+cv.waitKey(0)
+cv.destroyAllWindows
+
+blur_img = cv.GaussianBlur(img, (15,15), sigmaX=25, sigmaY=0)
+cv.imshow("Blurred Image", blur_img)
+cv.imwrite('Gaussian_Blur.jpg',blur_img)
+cv.waitKey(0)
+cv.destroyAllWindows()
